@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/scripts/roller.js"></script>
+    <link rel="stylesheet" href="roller_style.css">
+
+</head>
+
+<body id="app-container">
+    <div class="container" id="input-screen">
+        <!-- DICE TYPES -->
+        <div class="count-row">
+            <div class="center">
+                <div class="d-count center"><img src="/assets/app_roller/count4.png" alt=""></div>
+                <div class="d-count center"><img src="/assets/app_roller/count6.png" alt=""></div>
+                <div class="d-count center"><img src="/assets/app_roller/count8.png" alt=""></div>
+                <div class="d-count center"><img src="/assets/app_roller/count10.png" alt=""></div>
+                <div class="d-count center"><img src="/assets/app_roller/count12.png" alt=""></div>
+                <div class="d-count center"><img src="/assets/app_roller/count20.png" alt=""></div>
+            </div>
+
+            <!-- DICE COUNT -->
+            <div class="center">
+                <div class="n-count center">
+                    <img id="d4-counter" src="/assets/app_roller/num0.png" alt="">
+                </div>
+                <div class="n-count center">
+                    <img id="d6-counter" src="/assets/app_roller/num0.png" alt="">
+                </div>
+                <div class="n-count center">
+                    <img id="d8-counter" src="/assets/app_roller/num0.png" alt="">
+                </div>
+                <div class="n-count center">
+                    <img id="d10-counter" src="/assets/app_roller/num0.png" alt="">
+                </div>
+                <div class="n-count center">
+                    <img id="d12-counter" src="/assets/app_roller/num0.png" alt="">
+                </div>
+                <div class="n-count center">
+                    <img id="d20-counter" src="/assets/app_roller/num0.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- DICE SELECTORS -->
+        <div class="center selection-row">
+            <div id="left-arrow">
+                <img src="/assets/app_roller/buttonleftarrow.png" alt="">
+            </div>
+            <div>
+                <img id="dice-name" src="/assets/app_roller/name20.png" alt="">
+            </div>
+            <div id="right-arrow">
+                <img src="/assets/app_roller/buttonrightarrow.png" alt="">
+            </div>
+        </div>
+
+        <!-- DICE CHOICE -->
+        <div class="center display-row">
+            <div><img id="minus-button" src="/assets/app_roller/buttonminus2.png" alt=""></div>
+            <div><img id="dice-choice" src="/assets/app_roller/d20sprite.png" alt=""></div>
+            <div><img id="plus-button" src="/assets/app_roller/buttonplus2.png" alt=""></div>
+        </div>
+
+        <!-- ROLL BUTTON -->
+        <div class="center">
+            <div>
+                <img id="roll-button" src="/assets/app_roller/buttonroll1static.png" alt="">
+            </div>
+        </div>
+
+        <!-- OPTIONS -->
+        <div class="space-between options-row">
+            <div id="q-button">
+                <img src="/assets/app_roller/buttonQ.png" alt="">
+            </div>
+            <div id="x-button">
+                <img src="/assets/app_roller/buttonX.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- RESULT SCREEN -->
+    <div class="container" id="result-screen">
+        <div id="counted-four" class="d-counted-sng">
+            <img src="/assets/app_roller/count4.png" alt="">
+            <div class="d-single" id="d4-counted">
+            </div>
+        </div>
+        <div id="counted-six" class="d-counted-sng">
+            <img src="/assets/app_roller/count6.png" alt="">
+            <div class="d-single" id="d6-counted">
+            </div>
+        </div>
+        <div id="counted-eight" class="d-counted-sng">
+            <img src="/assets/app_roller/count8.png" alt="">
+            <div class="d-single" id="d8-counted">
+            </div>
+        </div>
+        <div id="counted-ten" class="d-counted-dbl">
+            <img src="/assets/app_roller/count10.png" alt="">
+            <div class="d-double" id="d10-counted">
+            </div>
+        </div>
+        <div id="counted-twelve" class="d-counted-dbl">
+            <img src="/assets/app_roller/count12.png" alt="">
+            <div class="d-double" id="d12-counted">
+            </div>
+        </div>
+        <div id="counted-twenty" class="d-counted-dbl">
+            <img src="/assets/app_roller/count20.png" alt="">
+            <div class="d-double" id="d20-counted">
+
+            </div>
+        </div>
+
+        <!-- OPTIONS -->
+        <div class="space-between options-row">
+            <div id="q-button">
+                <img src="/assets/app_roller/buttonQ.png" alt="">
+            </div>
+            <div id="refresh-button">
+                <img src="/assets/app_roller/buttonrefresh.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <%- include("partials/script.ejs") %>
+</body>
+
+</html>

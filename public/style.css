@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'BUMP';
+    src: url("BUMP.ttf");
+}
+
+@font-face {
+    font-family: "Sedate";
+    src: url("Sedate.ttf");
+}
+
+@font-face {
+    font-family: "Jitter";
+    src: url("Jitterv2.ttf");
+}
+
+:root {
+    --goldenrod: #ffd000;
+    /* --goldenrod: #ffd700; */
+
+    --amber: #d6a41b;
+    /* --amber: #d6a41b; */
+
+    --olive: #363811;
+
+    /* V2 --olive: #363811; */
+    /* V1 --olive: #5a5e20; */
+
+    --puce: #3f2e10;
+    /* --puce: #3f2e10; */
+
+}
+
+
+body {
+    background-color: var(--olive);
+}
+
+p, a{
+    font: inherit;
+    font-family: "Sedate";
+    color: var(--goldenrod)
+}
+a {
+    cursor: pointer;
+}
+
+h1 {
+    font-family: "Jitter";
+    font-size: 32px;
+    color: var(--goldenrod)
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.navbar-links {
+    margin-left: 20px;
+
+}
+
+.body-nav {
+    margin: 0.25rem 0;
+}
+
+

@@ -1,0 +1,177 @@
+body,
+html {
+    width: 400px;
+    max-width: 400px;
+    height: 600px;
+    max-height: 600px;
+    background-color: #8f8e8e;
+}
+.container {
+    width: 400px;
+    max-width: 400px;
+    height: 600px;
+    max-height: 600px;
+    background-color: #221c1a;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+
+.center {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.space-between {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.revealed {
+    visibility: visible;
+}
+
+/* INPUT SCREEN */
+
+.count-row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.d-count {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 52px;
+    height: 38px;
+}
+
+.n-count {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 52px;
+    height: 38px;
+}
+
+.selection-row {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.display-row {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.options-row {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* RESULTS SCREEN */ 
+
+.counted {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.d-single {
+    padding-left: 29px;
+    display: flex;
+    align-items: center;
+}
+
+.d-double {
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.d-counted-sng {
+    display: flex;
+    flex-direction: row;
+    padding-left: 34px;
+    padding-top: 30px
+}
+
+.d-counted-dbl {
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+    padding-top: 30px
+}
+
+
+#left-arrow, #right-arrow, #minus-button, #plus-button, #roll-button, #q-button, #x-button, #refresh-button {
+    cursor: pointer;
+}
+
+#left-arrow {
+    margin-right: 40px;
+}
+
+#right-arrow {
+    margin-left: 40px;
+}
+
+#minus-button {
+    margin-right: 20px;
+}
+
+#plus-button {
+    margin-left: 20px;
+}
+
+#roll-button {
+}
+
+#q-button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#x-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#refresh-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#input-screen {
+    position: relative;
+}
+
+#result-screen {
+    display: none;
+    position: relative;
+}
+
+@font-face {
+    font-family: DiceText;
+    src: url("/assets/DRoll.ttf")
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(0, 2px); }
+    50% { transform: translate(0,0); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s ease-in-out;
+    animation-iteration-count: 1; 
+  }
