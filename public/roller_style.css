@@ -28,7 +28,6 @@ html {
 
 .space-between {
     display: flex;
-    width: 100%;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -74,6 +73,7 @@ html {
 
 .options-row {
     position: absolute;
+    width: 100%;
     bottom: 0;
 }
 
@@ -109,6 +109,19 @@ html {
     flex-direction: row;
     padding-left: 30px;
     padding-top: 30px
+}
+
+.column-total-digit {
+    height: 60px;
+    width: auto;
+}
+
+.row-total {
+    padding-right: 30px;
+}
+
+.total-text {
+    font-family: "DiceText";
 }
 
 
@@ -159,9 +172,33 @@ html {
     position: relative;
 }
 
+#sum-row {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#total-sprite {
+    display: none;
+    margin-right: 5px;
+
+}
+
+#total-sum-calculated {
+    display: none;
+    margin-left: 5px;
+}
+
+#sum-text {
+    font-family: "DiceText";
+    color: #ffd541;
+    padding-bottom: 25px;
+}
+
+
 @font-face {
     font-family: DiceText;
-    src: url("/assets/DRoll.ttf")
+    src: url("/assets/app_roller/DRoll.ttf")
 }
 
 @keyframes shake {

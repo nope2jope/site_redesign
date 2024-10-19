@@ -25,6 +25,7 @@ const diceSums = {
   10: 0,
   12: 0,
   20: 0,
+  "T": 0
 };
 
 var toRoll = 0;
@@ -129,6 +130,18 @@ function rollDice(dice_val, num) {
   return arr;
 };
 
+function sumDice(sum_template, roll_template) {
+  let a = sum_template;
+  let total = 0;
+  for (key in roll_template) {
+    a[key] = roll_template[key].reduce((partialSum, a) => partialSum + a, 0)
+    total += a[key]
+  }
+
+  a["T"] = total.toString();
+  return a;
+}
+
 function generateDivs(r, x) {
   let c = 0;
   const d = $(`<div id="generated-div${c}"><img src="/assets/app_roller/val${x}.png" alt=""></div>`);
@@ -172,24 +185,50 @@ $(document).ready(() => {
         }
       };
 
+      var sums = sumDice(diceSums, diceRolls);
+
       // updates screen
       $("#input-screen").hide();
       $("#result-screen").show();
+      // $("#sum-text").text(sums["T"])
+      if (sums["T"].slice(0, 1)) {
+      $("#column-total-digit-0").attr("src", `/assets/app_roller/val${sums["T"].slice(0,1)}.png`);
+      $("#column-total-digit-0").attr("src", `/assets/app_roller/val${sums["T"].slice(0,1)}.png`).show();
+
+      }
+      if (sums["T"].slice(1, 2)) {
+        $("#column-total-digit-1").attr("src", `/assets/app_roller/val${sums["T"].slice(1, 2)}.png`).show();
+      }
+      if (sums["T"].slice(2, 3)) {
+        $("#column-total-digit-2").attr("src", `/assets/app_roller/val${sums["T"].slice(2, 3)}.png`).show();
+      }
+
+
+
+
+
 
       var keys = Object.keys(diceRolls);
       let delay = 0;
+      let step = 0;
 
       // iterates through each dice (e.g. d4,d6,d8) and animates dice results
       keys.forEach(key => {
         $(`#d${key}-counted`).empty();
         diceRolls[key].forEach(value => {
+          step++
           setTimeout(() => {
             generateDivs(`#d${key}-counted`, value);
           }, delay);
           // resets animation delay
           delay += 750;
         });
+
       });
+
+      setTimeout(() => { $("#total-sprite").show(); }, (step * 750) + 500)
+      setTimeout(() => { $("#total-sum-calculated").show(); }, (step * 750) + 1500)
+
     }
   });
 
@@ -233,6 +272,9 @@ $(document).ready(() => {
     resetTemplates();
     // update screen
     $("#result-screen").hide();
+    $("#total-sprite").hide();
+    $("#total-sum-calculated").hide();
+    $("#column-total-digit-2").hide()
     $("#input-screen").show();
   });
 
