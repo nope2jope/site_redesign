@@ -4,7 +4,7 @@ function changeSection(id) {
   $(`#${section}`).show();
 }
 
-$(document).ready(()=> {
+$(function () {
     $("#well").on("mouseenter", function () {
         $(this).attr("src", "assets/well_sprite_color_animate_2.gif");
       }).on("mouseleave", function () {

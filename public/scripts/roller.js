@@ -142,8 +142,8 @@ function sumDice(sum_template, roll_template) {
   return a;
 }
 
-function generateDivs(r, x) {
-  let c = 0;
+function generateDivs(r, x, s) {
+  let c = s;
   const d = $(`<div id="generated-div${c}"><img src="/assets/app_roller/val${x}.png" alt=""></div>`);
   $(r).append(d);
   d.addClass("counted");
@@ -151,7 +151,7 @@ function generateDivs(r, x) {
 
 };
 
-$(document).ready(() => {
+$(function () {
 
   const btnLeftArrow = $("#left-arrow");
   const btnRightArrow = $("#right-arrow");
@@ -185,15 +185,35 @@ $(document).ready(() => {
         }
       };
 
-      var sums = sumDice(diceSums, diceRolls);
-
-      // updates screen
+      // changes screen
       $("#input-screen").hide();
       $("#result-screen").show();
-      // $("#sum-text").text(sums["T"])
+
+      // iterates through each dice (e.g. d4,d6,d8) and animates dice results
+      var keys = Object.keys(diceRolls);
+      let delay = 0;
+      let step = 0;
+      let divCount = 0;
+
+      keys.forEach(key => {
+        $(`#d${key}-counted`).empty();
+        diceRolls[key].forEach(value => {
+          step++
+          setTimeout(() => {
+            divCount++
+            generateDivs(`#d${key}-counted`, value, divCount);
+          }, delay);
+          // resets animation delay
+          delay += 750;
+        });
+
+      });
+
+      // update sum total for display according to length of int (converted to string)
+      var sums = sumDice(diceSums, diceRolls);
+
       if (sums["T"].slice(0, 1)) {
-      $("#column-total-digit-0").attr("src", `/assets/app_roller/val${sums["T"].slice(0,1)}.png`);
-      $("#column-total-digit-0").attr("src", `/assets/app_roller/val${sums["T"].slice(0,1)}.png`).show();
+        $("#column-total-digit-0").attr("src", `/assets/app_roller/val${sums["T"].slice(0, 1)}.png`).show();
 
       }
       if (sums["T"].slice(1, 2)) {
@@ -203,29 +223,7 @@ $(document).ready(() => {
         $("#column-total-digit-2").attr("src", `/assets/app_roller/val${sums["T"].slice(2, 3)}.png`).show();
       }
 
-
-
-
-
-
-      var keys = Object.keys(diceRolls);
-      let delay = 0;
-      let step = 0;
-
-      // iterates through each dice (e.g. d4,d6,d8) and animates dice results
-      keys.forEach(key => {
-        $(`#d${key}-counted`).empty();
-        diceRolls[key].forEach(value => {
-          step++
-          setTimeout(() => {
-            generateDivs(`#d${key}-counted`, value);
-          }, delay);
-          // resets animation delay
-          delay += 750;
-        });
-
-      });
-
+      // displays sum totals
       setTimeout(() => { $("#total-sprite").show(); }, (step * 750) + 500)
       setTimeout(() => { $("#total-sum-calculated").show(); }, (step * 750) + 1500)
 
@@ -271,6 +269,9 @@ $(document).ready(() => {
 
     resetTemplates();
     // update screen
+    $("#column-total-digit-0").attr("src", ``);
+    $("#column-total-digit-1").attr("src", ``);
+    $("#column-total-digit-2").attr("src", ``);
     $("#result-screen").hide();
     $("#total-sprite").hide();
     $("#total-sum-calculated").hide();
