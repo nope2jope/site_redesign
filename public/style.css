@@ -28,6 +28,14 @@
     --puce: #3f2e10;
     /* --puce: #3f2e10; */
 
+    --denim: #00002c;
+
+    --violet: #3a3277;
+    
+    --slate: #6772a9;
+
+    --off-white: #e4e5fa;
+
 }
 
 
@@ -44,14 +52,31 @@ a {
     cursor: pointer;
 }
 
+
+
 h1 {
     font-family: "Jitter";
-    font-size: 32px;
-    color: var(--goldenrod)
+    font-size: 2rem;
+    color: var(--goldenrod);
+    margin: 0;
+}
+
+h3 {
+    font-family: "Sedate";
+    font-size: 1.5rem;
 }
 
 a {
     text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-family: "Sedate";
 }
 
 #navbar {
@@ -61,17 +86,74 @@ a {
     margin-top: 2rem;
 }
 
+.container {
+    display: grid;
+}
+
 .hide {
     display: none;
 }
 
 .navbar-links {
     margin-left: 20px;
+}
 
+.main-body {
+    margin-top: 5rem;
+}
+
+.buttons {
+    padding-top: 1rem;
+    padding-left: 2rem;
 }
 
 .body-nav {
-    margin: 0.25rem 0;
+    margin: 1rem 0;
 }
+
+.dark {
+    background-color: var(--denim);
+    /* color: var(--off-white) */
+    color: var(--off-white)
+}
+
+.works-card {
+    background-color: var(--goldenrod);
+    color: var(--puce);
+
+    border-radius: 13px;
+}
+
+.works-header {
+    background-color: var(--goldenrod);
+    margin: 1.75rem 0 .5rem 0;
+}
+
+.works-body {
+    background-color: var(--olive);
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--goldenrod);
+    padding: .5rem 0;
+}
+
+.works-img {
+    width: 80%;
+}
+
+.works-text {
+    color: var(--puce);
+    margin: 0;
+}
+
+.works-footer {
+    margin: 1rem 1rem;
+}
+
+.works-tag {
+    display: inline-block;
+    color: var(--puce);
+}
+
 
 
