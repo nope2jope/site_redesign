@@ -1,52 +1,39 @@
 <div id="WORKS" class="container main-body hide">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <h1 class="">HOW VERY LIKE KING ARTHUR...</h1>
-
-            <p>Here is a selection of my web development and other creative works.</p>
-            <p>Additional assets, fonts, and code are available on my GitHub.</p>
-        </div>
-
-        <!-- card -->
-        <div class="col-6 works-card">
-            <div class="works-header">
-                <h3 class="works-text center">---WORK---</h3>
-            </div>
-
-            <div class="works-body center"> <img class="works-img" src="/assets/plant300/plant300cover.png" alt="">
-            </div>
-            <div class="works-footer">
-                <p class="works-text">A brief description of the work.</p>
-                <ul class="works-tag">
-                    <li class="works-tag">tag</li>
-                    <li class="works-tag">tag</li>
-                </ul>
-            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-6">
-            <h1 class="">HOW VERY LIKE KING ARTHUR...</h1>
-
+            <div class="buttons">
             <p>Here is a selection of my web development and other creative works.</p>
             <p>Additional assets, fonts, and code are available on my GitHub.</p>
         </div>
-
-        <!-- card -->
-        <div class="col-6 works-card">
-            <div class="works-header">
-                <h3 class="works-text center">---WORK---</h3>
-            </div>
-
-            <div class="works-body center"> <img class="works-img" src="/assets/plant300/plant300cover.png" alt="">
-            </div>
-            <div class="works-footer">
-                <p class="works-text">A brief description of the work.</p>
-                <ul class="works-tag">
-                    <li class="works-tag">tag</li>
-                    <li class="works-tag">tag</li>
-                </ul>
-            </div>
         </div>
+
+        <% if (locals.data) { %>
+            <% for (let i = 0; i < data.length; i++) { %>
+
+            <div class="col-6 works-card">
+                <div class="works-header">
+                    <h3 class="works-text center">--- <%= data[i].title %> ---</h3>
+                </div>
+
+                <div class="works-body center"> <img class="works-img" src=<%= data[0].thumbnail %> alt="">
+                </div>
+                <div class="works-footer">
+                    <p class="works-text"><%= data[i].description %></p>
+                    <ul class="works-tag">
+                        <% for (let a = 0; a < data[i].tags.length; a++) { %>
+                        <li class="works-tag"> 
+                        +<%= data[i].tags[a] %></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+            <% } %>
+            <% } %>
+
     </div>
 </div>
