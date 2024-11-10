@@ -18,6 +18,14 @@ $(function () {
         changeSection($(this).attr("id"))
       });
 
+      $("#open-modal").on("click", function() {
+        $(".modal").show()
+      });
+
+      $(".modal-close").on("click", function() {
+        $(".modal").hide()
+      })
+
       $("#depths-landing").on("click", function(){
         lightsOut();
       })
