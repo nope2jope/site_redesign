@@ -142,7 +142,6 @@ li {
 .works-card {
     background-color: var(--goldenrod);
     color: var(--puce);
-
     border-radius: 13px;
 }
 
@@ -160,7 +159,8 @@ li {
 }
 
 .works-img {
-    width: 80%;
+    max-height: 300px;
+    max-width: 80%;
 }
 
 .works-text {
