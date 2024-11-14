@@ -3,11 +3,21 @@ body {
     max-width: 400px;
     height: 600px;
     max-height: 600px;
-    background-color: #0c0a09;
-    background-image: url('assets/app_roller/dice_pattern_bg.png');
+
+    background-image: url('assets/app_roller/dicebg_pattern.png');
+    background-color: rgb(27, 11, 0);
     margin-left: auto;
     margin-right: auto; 
+    overflow: hidden;
 }
+
+/* .bg-img {
+    z-index: -1;
+    opacity: .5;
+    position: absolute;
+    width: auto;
+    overflow: hidden;
+} */
 
 img {
     width: auto;

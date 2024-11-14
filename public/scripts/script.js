@@ -1,7 +1,7 @@
 function changeSection(id) {
   var section = id.split("-")[0].toUpperCase();
   $(`#${section}`).show();
-  $(`#${id}`).parent().parent().parent().parent().parent().hide();
+  $(`#${id}`).parent().parent().parent().parent().hide();
 }
 
 function lightsOut() {
@@ -14,12 +14,12 @@ function lightsOut() {
 }
 
 $(function () {
-      $("a").on("click", function() {
-        changeSection($(this).attr("id"))
+      $(".body-nav").on("click", function() {
+        changeSection(this.id)
       });
 
-      $("#open-modal").on("click", function() {
-        $(".modal").show()
+      $(".modal-open").on("click", function() {
+        $(`#${this.id}modal`).show()
       });
 
       $(".modal-close").on("click", function() {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link href="grid/simple-grid.css" rel="stylesheet">
+    <link rel="stylesheet" href="pokedex_style.css">
+    <script src="/scripts/pokedex.js"></script>
+    <title>Pokemon Type Weakness</title>
+</head>
+
+<main class="container">
+
+    <div class="row center card-container">
+        <% if (locals.errorMessage) { %>
+            <div class="error-banner">
+                <% if (locals.errorStatus===404) { %>
+
+                    <p class="error-message">error: please enter a valid Pokemon name or id</p>
+                    <% } else { %>
+                        <p class="error-message">
+                            <%= errorMessage %>
+                        </p>
+                        <% } %>
+            </div>
+            <% } %>
+                <%- include("partials/form-card.ejs") %>
+                    <%- include("partials/response-card.ejs") %>
+
+    </div>
+</main>
