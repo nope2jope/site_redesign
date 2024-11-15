@@ -4,7 +4,7 @@ body {
     height: 600px;
     max-height: 600px;
 
-    background-image: url('assets/app_roller/dicebg_pattern.png');
+    background-image: url('assets/app_roller/dicebg_80opactiy.png');
     background-color: rgb(27, 11, 0);
     margin-left: auto;
     margin-right: auto; 
@@ -51,12 +51,10 @@ img {
 }
 
 .hidden {
-    visibility: hidden;
-}
+visibility: hidden;}
 
 .revealed {
-    visibility: visible;
-}
+visibility: visible;}
 
 /* INPUT SCREEN */
 
@@ -215,6 +213,13 @@ img {
     height: 42px;
 }
 
+#result-q-button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 42px;
+    height: 42px;
+}
+
 #input-screen {
     position: relative;
 }
@@ -225,13 +230,11 @@ img {
 }
 
 #sum-row {
-    display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
 #total-sprite {
-    display: none;
     margin-right: 5px;
     width: 180px;
     height: 102px;
@@ -239,7 +242,6 @@ img {
 }
 
 #total-sum-calculated {
-    display: none;
     margin-left: 5px;
 }
 

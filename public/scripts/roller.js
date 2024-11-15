@@ -28,11 +28,16 @@ const diceSums = {
   "T": 0
 };
 
+var timeoutIds = [];
+
 var toRoll = 0;
 
 var currentSelection = 5;
 
 function resetTemplates() {
+
+  timeoutIds.forEach(clearTimeout);
+
   toRoll = 0;
 
   for (let x in diceCount) {
@@ -146,8 +151,8 @@ function generateDivs(r, x, s) {
   let c = s;
   const d = $(`<div id="generated-div${c}"><img src="/assets/app_roller/val${x}.png" alt=""></div>`);
   $(r).append(d);
-  d.addClass("counted");
-  d.addClass("shake");
+  d.addClass("generated counted hidden");
+  // d.addClass("shake");
 
 };
 
@@ -170,6 +175,8 @@ $(function () {
   ;
 
   btnRoll.on("click", () => {
+    // timeoutIds.forEach(clearTimeout);
+    // timeoutIds = [];
     // confirms there are results to display 
     if (toRoll > 0) {
       if (toRoll === 1) {
@@ -189,25 +196,41 @@ $(function () {
       $("#input-screen").hide();
       $("#result-screen").show();
 
+
       // iterates through each dice (e.g. d4,d6,d8) and animates dice results
-      var keys = Object.keys(diceRolls);
+      var rolls = Object.keys(diceRolls);
       let delay = 0;
       let step = 0;
       let divCount = 0;
 
-      keys.forEach(key => {
+
+
+      $("#result-q-button").on("click", () => {
+        timeoutIds.forEach(clearTimeout);
+        timeoutIds = [];
+        $(".generated").stop(true, true).addClass("revealed");
+        $(".generated").addClass("revealed");
+        $("#total-sprite").stop(true, true).addClass("revealed");
+        $("#total-sum-calculated").stop(true, true).addClass("revealed");
+      })
+
+      rolls.forEach(key => {
         $(`#d${key}-counted`).empty();
         diceRolls[key].forEach(value => {
-          step++
-          setTimeout(() => {
-            divCount++
-            generateDivs(`#d${key}-counted`, value, divCount);
-          }, delay);
-          // resets animation delay
-          delay += 750;
+          step++;
+          divCount++;
+          generateDivs(`#d${key}-counted`, value, divCount);
         });
-
       });
+
+      for (let q = 0; q < divCount + 1; q++) {
+        var timeoutId = setTimeout(() => {
+          // $(`#generated-div${q}`).show();
+          $(`#generated-div${q}`).addClass("shake revealed");
+        }, delay);
+        delay += 750;
+        timeoutIds.push(timeoutId)
+      };
 
       // update sum total for display according to length of int (converted to string)
       var sums = sumDice(diceSums, diceRolls);
@@ -224,8 +247,10 @@ $(function () {
       }
 
       // displays sum totals
-      setTimeout(() => { $("#total-sprite").show(); }, (step * 750) + 500)
-      setTimeout(() => { $("#total-sum-calculated").show(); }, (step * 750) + 1500)
+      var sumID = setTimeout(() => { $("#total-sprite").addClass("revealed"); }, (divCount * 750) + 500);
+      var calcID = setTimeout(() => { $("#total-sum-calculated").addClass("revealed"); }, (divCount * 750) + 1500);
+      timeoutIds.push(sumID);
+      timeoutIds.push(calcID);
 
     }
   });
@@ -266,17 +291,16 @@ $(function () {
   });
 
   btnRefresh.on("click", () => {
-
-    resetTemplates();
     // update screen
     $("#column-total-digit-0").attr("src", ``);
     $("#column-total-digit-1").attr("src", ``);
     $("#column-total-digit-2").attr("src", ``);
     $("#result-screen").hide();
-    $("#total-sprite").hide();
-    $("#total-sum-calculated").hide();
-    $("#column-total-digit-2").hide()
+    $("#total-sprite").removeClass("revealed");
+    $("#total-sum-calculated").removeClass("revealed");;
+    resetTemplates();
     $("#input-screen").show();
   });
+
 
 });

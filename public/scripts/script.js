@@ -8,9 +8,7 @@ function lightsOut() {
   $("body").addClass("dark");
   $("h1").addClass("dark");
   $("p").addClass("dark");
-  $("a").addClass("dark")
-  
-
+  $("a").addClass("dark");
 }
 
 $(function () {
@@ -24,10 +22,10 @@ $(function () {
 
       $(".modal-close").on("click", function() {
         $(".modal").hide()
-      })
+      });
 
       $("#depths-landing").on("click", function(){
         lightsOut();
-      })
+      });
       
       });
