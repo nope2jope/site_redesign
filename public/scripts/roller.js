@@ -165,6 +165,9 @@ $(function () {
   const btnRoll = $("#roll-button");
   const btnX = $("#x-button");
   const btnRefresh = $("#refresh-button");
+  const btnSkip = $("#skip-button");
+  const btnQ = $("#q-button");
+  const btnMX = $("#close-menu-button")
 
 
   btnRoll.on("mouseenter", function () {
@@ -196,23 +199,11 @@ $(function () {
       $("#input-screen").hide();
       $("#result-screen").show();
 
-
       // iterates through each dice (e.g. d4,d6,d8) and animates dice results
       var rolls = Object.keys(diceRolls);
       let delay = 0;
       let step = 0;
       let divCount = 0;
-
-
-
-      $("#result-q-button").on("click", () => {
-        timeoutIds.forEach(clearTimeout);
-        timeoutIds = [];
-        $(".generated").stop(true, true).addClass("revealed");
-        $(".generated").addClass("revealed");
-        $("#total-sprite").stop(true, true).addClass("revealed");
-        $("#total-sum-calculated").stop(true, true).addClass("revealed");
-      })
 
       rolls.forEach(key => {
         $(`#d${key}-counted`).empty();
@@ -301,6 +292,23 @@ $(function () {
     resetTemplates();
     $("#input-screen").show();
   });
+
+  btnSkip.on("click", () => {
+    timeoutIds.forEach(clearTimeout);
+    timeoutIds = [];
+    $(".generated").stop(true, true).addClass("revealed");
+    $(".generated").addClass("revealed");
+    // $("#total-sprite").stop(true, true).addClass("revealed");
+    // $("#total-sum-calculated").stop(true, true).addClass("revealed");
+  });
+
+  btnQ.on("click", () => {
+    $("#menu-container").show();
+  });
+
+  btnMX.on("click", () => {
+    $("#menu-container").hide();
+  })
 
 
 });

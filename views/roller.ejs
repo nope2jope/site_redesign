@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ROLL!</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/scripts/roller.js"></script>
@@ -14,7 +14,14 @@
 
 <body >
 
-        <!-- <img class="bg-img" src="assets/app_roller/dicebg.png"> -->
+    <div class="container" id="menu-container">
+        <div id="about-menu">
+            <div id="close-menu-button"><img src="/assets/app_roller/buttonX.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
     <div class="container" id="input-screen">
         <!-- DICE TYPES -->
         <div class="count-row">
@@ -137,8 +144,8 @@
 
         <!-- OPTIONS -->
         <div class="space-between options-row">
-            <div id="result-q-button">
-                <img src="/assets/app_roller/buttonQ.png" alt="">
+            <div id="skip-button">
+                <img src="/assets/app_roller/buttonskip.png" alt="">
             </div>
             <div id="refresh-button">
                 <img src="/assets/app_roller/buttonrefresh.png" alt="">

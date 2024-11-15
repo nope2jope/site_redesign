@@ -4,7 +4,7 @@ body {
     height: 600px;
     max-height: 600px;
 
-    background-image: url('assets/app_roller/dicebg_80opactiy.png');
+    background-image: url('assets/app_roller/dicebg_pattern.png');
     background-color: rgb(27, 11, 0);
     margin-left: auto;
     margin-right: auto; 
@@ -145,6 +145,7 @@ visibility: visible;}
     font-family: "DiceText";
 }
 
+/* ID'D ELEMENTS */
 
 #left-arrow,
 #right-arrow,
@@ -213,7 +214,7 @@ visibility: visible;}
     height: 42px;
 }
 
-#result-q-button {
+#skip-button {
     margin-left: 10px;
     margin-bottom: 10px;
     width: 42px;
@@ -227,6 +228,21 @@ visibility: visible;}
 #result-screen {
     display: none;
     position: relative;
+}
+
+#menu-container {
+    display: none; 
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.671);
+    z-index: 5;
+
+}
+
+#about-menu {
+    background-color: #221c1a;;
+    width: 300px;
+    height: 500px;
+    margin: 50px;
 }
 
 #sum-row {
