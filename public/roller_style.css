@@ -1,3 +1,22 @@
+@font-face {
+    font-family: DiceText;
+    src: url("/assets/app_roller/DRoll.ttf")
+}
+
+@font-face {
+    font-family: "Sedate";
+    src: url("Sedate.ttf")
+}
+
+html {
+    width: 400px;
+    max-width: 400px;
+    height: 600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
 body {
     width: 400px;
     max-width: 400px;
@@ -8,7 +27,6 @@ body {
     background-color: rgb(27, 11, 0);
     margin-left: auto;
     margin-right: auto; 
-    overflow: hidden;
 }
 
 /* .bg-img {
@@ -22,6 +40,18 @@ body {
 img {
     width: auto;
     height: 100%;
+}
+
+a, p {
+    color: #ffd541;
+    font-family: "Sedate";
+    line-height: normal;
+    text-decoration: none;
+
+}
+
+ul, li {
+    color: #ffd541;
 }
 
 .container {
@@ -239,10 +269,30 @@ visibility: visible;}
 }
 
 #about-menu {
-    background-color: #221c1a;;
+    background-color: #221c1a;
     width: 300px;
     height: 500px;
-    margin: 50px;
+    margin: 6%;
+    padding: 25px;
+    position: relative;
+}
+
+#about-body {
+    height: 95%;
+    position: relative;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: #ffd541;
+    padding: 5% 8% 0 5%;
+}
+
+#close-menu-button {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    bottom: 5%;
+    right: 5%;
 }
 
 #sum-row {
@@ -268,10 +318,7 @@ visibility: visible;}
 }
 
 
-@font-face {
-    font-family: DiceText;
-    src: url("/assets/app_roller/DRoll.ttf")
-}
+
 
 @keyframes shake {
     0% {

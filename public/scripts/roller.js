@@ -278,10 +278,12 @@ $(function () {
   });
 
   btnX.on("click", () => {
+    playSound("click");
     resetTemplates();
   });
 
   btnRefresh.on("click", () => {
+    playSound("click");
     // update screen
     $("#column-total-digit-0").attr("src", ``);
     $("#column-total-digit-1").attr("src", ``);
@@ -294,6 +296,7 @@ $(function () {
   });
 
   btnSkip.on("click", () => {
+    playSound("click");
     timeoutIds.forEach(clearTimeout);
     timeoutIds = [];
     $(".generated").stop(true, true).addClass("revealed");
@@ -303,10 +306,12 @@ $(function () {
   });
 
   btnQ.on("click", () => {
+    playSound("click");
     $("#menu-container").show();
   });
 
   btnMX.on("click", () => {
+    playSound("click");
     $("#menu-container").hide();
   })
 
