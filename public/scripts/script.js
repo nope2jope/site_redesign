@@ -12,20 +12,31 @@ function lightsOut() {
 }
 
 $(function () {
-      $(".body-nav").on("click", function() {
-        changeSection(this.id)
-      });
 
-      $(".modal-open").on("click", function() {
-        $(`#${this.id}modal`).show()
-      });
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
-      $(".modal-close").on("click", function() {
-        $(".modal").hide()
-      });
+  $(".body-nav").on("click", function () {
+    changeSection(this.id)
+  });
 
-      $("#depths-landing").on("click", function(){
-        lightsOut();
-      });
-      
-      });
+  $(".modal-open").on("click", function () {
+    $(`#${this.id}modal`).show()
+  });
+
+  $(".modal-close").on("click", function () {
+    $(".modal").hide()
+  });
+
+  $("#depths-landing").on("click", function () {
+    lightsOut();
+  });
+
+});
