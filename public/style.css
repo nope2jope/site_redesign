@@ -13,6 +13,8 @@
     src: url("Jitterv2.ttf");
 }
 
+/* ANIMATIONS */
+
 @keyframes ease-in {
     from {
         top: -100px;
@@ -37,9 +39,6 @@
     }
 }
 
-div {
-    position: relative;
-}
 
 .ease-in {
     animation-name: ease-in;
@@ -47,41 +46,35 @@ div {
 }
 
 :root {
-    --goldenrod: #ffd000;
-    /* --goldenrod: #ffd700; */
 
-    --amber: #d6a41b;
-    /* --amber: #d6a41b; */
+    --jet: #1E2328;
+    --granite: #2a2e34;
+    --gray: #383f46;
 
-    --olive: #363811;
-
-    /* V2 --olive: #363811; */
-    /* V1 --olive: #5a5e20; */
-
-    --puce: #3f2e10;
-    /* --puce: #3f2e10; */
-
-    --denim: #00002c;
-
-    --violet: #3a3277;
-
-    --slate: #6772a9;
+    --amber: #EC9C04;
+    --goldenrod: #f5b301;
+    --nilla: #fed053;
 
     --off-white: #f2f3fc;
 
 }
 
-
+html,
 body {
-    background-color: var(--olive);
+    height: 100%;
+    background-color: var(--goldenrod);
+
+}
+
+div {
+    position: relative;
 }
 
 p,
 a,
-h1,
 h3 {
     font-family: "Sedate";
-    color: var(--goldenrod);
+    color: var(--jet);
     line-height: normal;
 }
 
@@ -93,12 +86,12 @@ a {
 h1 {
     font-family: "Jitter";
     font-size: 2rem;
-    color: var(--goldenrod);
+    color: var(--jet);
     margin: 0;
+    line-height: normal;
 }
 
 h3 {
-    font-family: "Sedate";
     font-size: 1.5rem;
 }
 
@@ -111,22 +104,68 @@ li {
     font-family: "Sedate";
 }
 
-#navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 2rem;
-}
 
-
+/* FUNCTIONAL */
 
 .hide {
     display: none;
 }
 
+.dark {
+    background-color: var(--jet);
+    /* color: var(--off-white) */
+    color: var(--nilla)
+}
+
+
+/* NAV */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.nav {
+    background-color: var(--jet);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 .navbar-links {
     margin-left: 20px;
+    color: var(--goldenrod);
 }
+
+.nav-name {
+    color: var(--goldenrod)
+}
+
+/* FOOT */
+
+footer {
+    background-color: var(--jet);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.footer-text {
+    color: var(--gray);
+    font-size: .75rem;
+}
+
+.buffer {
+    height: 50px;
+}
+
+/* MAIN */
+
 
 .main-body {
     margin-top: 5%;
@@ -141,12 +180,6 @@ li {
     margin: 5% 0;
 }
 
-.dark {
-    background-color: var(--denim);
-    /* color: var(--off-white) */
-    color: var(--off-white)
-}
-
 .works-card {
     background-color: var(--goldenrod);
     color: var(--puce);
@@ -159,7 +192,7 @@ li {
 }
 
 .works-body {
-    background-color:  #ffee90;
+    background-color: #ffee90;
     border-style: solid;
     border-width: 3px;
     border-color: var(--goldenrod);
@@ -195,7 +228,9 @@ li {
     max-width: 50px;
 }
 
-/* modal content */
+
+
+/* MODALS */
 
 .modal p {
     color: var(--puce)
@@ -226,7 +261,6 @@ li {
 
 }
 
-/* The Close Button */
 .modal-close {
     color: var(--puce);
     float: right;
@@ -242,7 +276,6 @@ li {
     cursor: pointer;
 }
 
-/* Modal Header */
 .modal-header {
     padding: 2px 16px;
     background-color: var(--amber);
@@ -251,12 +284,10 @@ li {
     color: var(--puce);
 }
 
-/* Modal Body */
 .modal-body {
     padding: 2px 16px;
 }
 
-/* Modal Footer */
 .modal-footer {
     padding: 2px 16px;
     background-color: var(--amber);
@@ -264,4 +295,3 @@ li {
     border-bottom-right-radius: 15px;
     color: var(--puce);
 }
-
