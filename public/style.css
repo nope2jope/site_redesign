@@ -71,8 +71,7 @@ div {
 }
 
 p,
-a,
-h3 {
+a {
     font-family: "Sedate";
     color: var(--jet);
     line-height: normal;
@@ -92,6 +91,9 @@ h1 {
 }
 
 h3 {
+    font-family: "Jitter";
+    color: var(--jet);
+    line-height: normal;
     font-size: 1.5rem;
 }
 
@@ -166,19 +168,19 @@ footer {
 
 /* MAIN */
 
-
 .main-body {
     margin-top: 5%;
 }
 
 .buttons {
     padding-top: 5%;
-    padding-left: 10%;
 }
 
 .body-nav {
     margin: 5% 0;
 }
+
+/* WORKS */
 
 .works-card {
     background-color: var(--goldenrod);
@@ -228,7 +230,40 @@ footer {
     max-width: 50px;
 }
 
+/* WORKS RE-WORKS */
 
+ul.tree, ul.tree ul {
+    list-style: none;
+     margin: 0;
+     padding: 0;
+   } 
+   ul.tree ul {
+     margin-left: 10px;
+   }
+   ul.tree li {
+     margin: 0;
+     padding: 0 7px;
+     line-height: 20px;
+     color: var(--jet);
+     border-left:2px solid var(--jet);
+
+   }
+   ul.tree li:last-child {
+       border-left:none;
+   }
+   ul.tree li:before {
+      position:relative;
+      top:-0.3em;
+      height:1em;
+      width:12px;
+      border-bottom:2px solid var(--jet);
+      content:"";
+      display:inline-block;
+      left:-7px;
+   }
+   ul.tree li:last-child:before {
+      border-left:2px solid var(--jet);   
+   }
 
 /* MODALS */
 
@@ -262,22 +297,11 @@ footer {
 
 }
 
-.modal-close {
-    color: var(--goldenrod);
-    font-size: 28px;
+.modal-close p {
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-}
-
-.modal-close p {
     color: var(--goldenrod);
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .modal-header {
