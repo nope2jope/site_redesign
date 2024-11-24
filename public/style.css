@@ -95,6 +95,7 @@ h3 {
     color: var(--jet);
     line-height: normal;
     font-size: 1.5rem;
+    margin: 0;
 }
 
 ul {
@@ -105,6 +106,18 @@ ul {
 li {
     font-family: "Sedate";
 }
+
+details>summary {
+    list-style: none;
+}
+/* 
+details summary>* {
+    display: inline;
+}
+
+summary::before {
+    content: "+"
+} */
 
 
 /* FUNCTIONAL */
@@ -182,6 +195,23 @@ footer {
 
 /* WORKS */
 
+.works-banner {
+    width: 100%;
+}
+
+.works-details {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+.works-headline {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* 
 .works-card {
     background-color: var(--goldenrod);
     color: var(--jet);
@@ -228,7 +258,7 @@ footer {
 
 .open-arrow {
     max-width: 50px;
-}
+} */
 
 /* WORKS RE-WORKS */
 
