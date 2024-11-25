@@ -138,8 +138,16 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res) => {
-    res.render("index.ejs", { data: worksData })
+    res.render("index.ejs")
 });
+
+app.get("/about", (req, res) => {
+    res.render("about.ejs")
+});
+
+app.get("/works", (req, res) => {
+    res.render("works.ejs", { data: worksData })
+})
 
 app.get("/roller", (req, res) => {
     res.render("roller.ejs")
@@ -149,7 +157,7 @@ app.get("/poke-checker", (req, res) => {
     res.render("pokedex.ejs");
 });
 
-app.post("/", async (req, res) => {
+app.post("/poke-checker", async (req, res) => {
     const searchTerm = req.body.pokemonName.toLowerCase();
 
     try {

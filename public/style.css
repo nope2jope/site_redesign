@@ -167,6 +167,10 @@ footer {
     font-size: .75rem;
 }
 
+.footer-text a {
+    color: var(--amber);
+}
+
 .buffer {
     height: 50px;
 }

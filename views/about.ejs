@@ -1,4 +1,10 @@
-<div id="ABOUT" class="main-body hide container">
+<!-- HEADER -->
+ <!-- css within header -->
+ <%- include("partials/header.ejs")%>
+        
+ <!-- BODY -->
+
+<div id="ABOUT" class="main-body container">
     <div class="row ease-in">
         <div class="col-12">
             <h1 class="ease-in">YOUR BREATHING STEADIES...</h1>
@@ -11,7 +17,7 @@
                 </p>
                 <p>I hold degrees in Writing and Information Technology, as well as various other technical
                     certifications.</p>
-                <p>You can view a collection of my works here.</p>
+                <p>You can view a collection of my works <a href="/works">here</a>.</p>
             </div>
         </div>
 
@@ -19,3 +25,7 @@
         <img id="mug" class="col-6 ease-in" src="assets/mug_recolor_animated.gif">
     </div>
 </div>
+
+<!-- FOOTER -->
+ <!-- scripts within footer -->
+ <%- include("partials/footer.ejs") %>

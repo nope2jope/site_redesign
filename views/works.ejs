@@ -1,0 +1,104 @@
+<!-- HEADER -->
+ <!-- css within header -->
+ <%- include("partials/header.ejs")%>
+        
+ <!-- BODY -->
+
+<div id="WORKS" class="container main-body">
+    <div class="row">
+        <div class="col-12 ease-in">
+            <h1 class=" ease-in">HOW VERY LIKE KING ARTHUR...</h1>
+        </div>
+
+        <div class="col-6 ease-in">
+            <div class="buttons ease-in">
+                <p>Here is a selection of my web development and other creative works.</p>
+                <p>Additional assets, fonts, and code are available on my <a href="https://github.com/nope2jope">GitHub</a>.</p>
+            </div>
+        </div>
+
+        <div class="col-6 ease-in">
+            <div>
+                <img class="works-banner" src="assets/sunrow.png" alt="">
+                <details class="works-details">
+                    <summary>
+                        <h3 class="works-headline">DEVELOPMENT</h3>
+                    </summary>
+                    <% if (locals.data) { %>
+                        <ul class="tree">
+                            <% for (let i=0; i < data.length; i++) { %>
+                                <% if (data[i].tags.includes("development")) { %>
+                                    <li><a href="<%= data[i].endpoint %>" target="_blank">
+                                            <%= data[i].title %>
+                                        </a></li>
+                                    <% } %>
+                                        <% } %>
+                        </ul>
+                        <% } %>
+                </details>
+                <img class="works-banner" src="assets/moonrow_flip.png" alt="">
+            </div>
+
+            <div style="margin-top: 5%; margin-bottom: 5%;"></div>
+
+            <div>
+                <img class="works-banner" src="assets/sunrow.png" alt="">
+                <details class="works-details">
+                    <summary>
+                        <h3 class="works-headline">WRITING</h3>
+                    </summary>
+                    <% if (locals.data) { %>
+                        <ul class="tree">
+                            <% for (let i=0; i < data.length; i++) { %>
+                                <% if (data[i].tags.includes("writing")) { %>
+                                    <li><a id="<%=data[i].modal %>" class="modal-open"><%= data[i].title %></a></li>
+                                    <% } %>
+                                        <% } %>
+                        </ul>
+                        <% } %>
+                </details>
+                <img class="works-banner" src="assets/moonrow_flip.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <% if (locals.data) { %>
+        <% for (let i=0; i < data.length; i++) { %>
+            <% if (data[i].tags.includes("writing")) { %>
+
+                <div id="<%= data[i].modal  %>modal" class="modal">
+                    <div class="swiper works-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                    src="assets/<%= data[i].modal  %>/<%= data[i].modal  %>cover.png"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="assets/<%= data[i].modal  %>/<%= data[i].modal  %>plate.png"
+                                    alt=""></div>
+                            <% for (let q=1; q<data[i].spread.length -2; q++) { %>
+                                <div class="swiper-slide"><img
+                                        src="assets/<%= data[i].modal  %>/<%= data[i].modal  %>_<%= q %>.png"
+                                        alt=""></div>
+                                <% } %>
+                                    <div class="swiper-slide"><img
+                                            src="assets/<%= data[i].modal  %>/<%= data[i].modal  %>backcover.png"
+                                            alt=""></div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="row center">
+                        <div class="modal-close">
+                            <p>CLOSE</p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                    <% } %>
+                        <% } %>
+
+</div>
+
+<!-- FOOTER -->
+ <!-- scripts within footer -->
+ <%- include("partials/footer.ejs") %>

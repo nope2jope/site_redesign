@@ -31,8 +31,8 @@ $(function () {
   });
 
   $(".body-nav").on("click", function () {
-    changeSection(this.id)
-  });
+      changeSection(this.id)
+});
 
   $(".modal-open").on("click", function () {
     $(`#${this.id}modal`).show()
