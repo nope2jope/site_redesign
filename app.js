@@ -9,7 +9,7 @@ const app = express();
 const worksData = [{
     "title": "ROLL!",
     "description": "Browser-based pixel art dice roller",
-    "tags": ["pixel art", "web development"],
+    "tags": ["pixel art", "development"],
     "thumbnail": "/assets/roll_cover.PNG",
     "endpoint": "/roller",
     "modal": "",
@@ -52,7 +52,7 @@ const worksData = [{
 {
     "title": "Poke Checker",
     "description": "PokeAPI-integrated match-up checker",
-    "tags": ["web development", "javascript"],
+    "tags": ["development", "javascript"],
     "thumbnail": "/assets/ball_pattern.png",
     "endpoint": "/poke-checker",
     "modal": "",

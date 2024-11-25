@@ -11,9 +11,16 @@ function lightsOut() {
   $("a").addClass("dark");
 }
 
+function lightsOn() {
+  $("body").removeClass("dark");
+  $("h1").removeClass("dark");
+  $("p").removeClass("dark");
+  $("a").removeClass("dark");
+}
+
 $(function () {
 
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".works-swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
@@ -37,6 +44,10 @@ $(function () {
 
   $("#depths-landing").on("click", function () {
     lightsOut();
+  });
+
+  $("#landing-depths").on("click", function () {
+    lightsOn();
   });
 
 });

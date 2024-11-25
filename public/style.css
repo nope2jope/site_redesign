@@ -45,6 +45,8 @@
     animation-duration: .5s;
 }
 
+/* MAIN */
+
 :root {
 
     --jet: #1E2328;
@@ -62,6 +64,7 @@
 html,
 body {
     height: 100%;
+    width: auto;
     background-color: var(--goldenrod);
 
 }
@@ -69,6 +72,12 @@ body {
 div {
     position: relative;
 }
+
+details>summary {
+    list-style: none;
+}
+
+/* TEXT */
 
 p,
 a {
@@ -98,26 +107,9 @@ h3 {
     margin: 0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
-
 li {
     font-family: "Sedate";
 }
-
-details>summary {
-    list-style: none;
-}
-/* 
-details summary>* {
-    display: inline;
-}
-
-summary::before {
-    content: "+"
-} */
 
 
 /* FUNCTIONAL */
@@ -179,7 +171,7 @@ footer {
     height: 50px;
 }
 
-/* MAIN */
+/* BODY CONTENT */
 
 .main-body {
     margin-top: 5%;
@@ -211,55 +203,6 @@ footer {
     margin-top: 1.5rem;
 }
 
-/* 
-.works-card {
-    background-color: var(--goldenrod);
-    color: var(--jet);
-    border-radius: 13px;
-}
-
-.works-header {
-    background-color: var(--goldenrod);
-    margin: 1.75rem 0 .5rem 0;
-}
-
-.works-body {
-    background-color: #ffee90;
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--goldenrod);
-    padding: .5rem 0;
-}
-
-.works-img {
-    max-height: 300px;
-    max-width: 80%;
-}
-
-.works-text {
-    color: var(--jet);
-    font-size: 1rem;
-    margin: 0;
-}
-
-.works-link {
-    float: right;
-}
-
-.works-footer {
-    margin: 1rem 1rem;
-}
-
-.works-tag {
-    display: inline-block;
-    font-size: .85rem;
-    color: var(--jet);
-}
-
-.open-arrow {
-    max-width: 50px;
-} */
-
 /* WORKS RE-WORKS */
 
 ul.tree, ul.tree ul {
@@ -273,7 +216,6 @@ ul.tree, ul.tree ul {
    ul.tree li {
      margin: 0;
      padding: 0 7px;
-     line-height: 20px;
      color: var(--jet);
      border-left:2px solid var(--jet);
 
