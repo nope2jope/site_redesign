@@ -155,11 +155,13 @@ li {
 
 footer {
     background-color: var(--jet);
+    display: flex;
     position: fixed;
     left: 0;
     bottom: 0;
     height: 50px;
     width: 100%;
+    align-items: center;
 }
 
 .footer-text {

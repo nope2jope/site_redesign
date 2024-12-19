@@ -1,7 +1,7 @@
 import express from "express";
 import { endpointName, endpointType, vulnerabilityTemplate, multiplierTemplate, resetTemplates, checkType, checkTypeWeaknesses, mergeObjects, calculateVulnerability, checkMultipliers } from "./public/scripts/pokedex.js";
 
-const PORT = 3000;
+const PORT = 8000;
 const HOST = '0.0.0.0';
 
 const app = express();
