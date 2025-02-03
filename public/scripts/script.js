@@ -50,4 +50,8 @@ $(function () {
     lightsOn();
   });
 
+  $("#landing-zone").on("click", function () {
+    lightsOn();
+  });
+
 });
