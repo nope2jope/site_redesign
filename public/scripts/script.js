@@ -31,7 +31,11 @@ $(function () {
   });
 
   $(".body-nav").on("click", function () {
-      changeSection(this.id)
+      if (this.childNodes[0]['href'] === "") {
+        changeSection(this.id)
+      }
+
+
 });
 
   $(".modal-open").on("click", function () {
