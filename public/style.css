@@ -66,39 +66,6 @@
     animation-duration: .5s;
 }
 
-.frog-zone-banner-element {
-    padding: 1rem 0;
-    position: relative;
-    font-family: "BUMP";
-    color: var(--goldenrod);
-    font-size: 1.5rem;
-    animation-name: waveAnimation ;
-    animation-duration: 1.75s;
-    animation-iteration-count: infinite ;
-    animation-delay: calc(.1s * var(--i));
-}
-
-  /* FROG ZONE */
-  .frog-zone-banner {
-    text-align: center;
-
-}
-
-.animated-banner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-    
-}
-
-.banner-word {
-    display: flex;
-    flex-direction: row;
-    width: max-content;
-    margin-right: 10px;
-}
 
 
 /* MAIN */
@@ -163,30 +130,13 @@ h3 {
     margin: 0;
 }
 
-h4 {
-    font-family: "BUMP";
-    color: var(--goldenrod);
-    line-height: normal;
-    font-size: .8rem;
-    margin: 0;
-}
+
 
 li {
     font-family: "Sedate";
 }
 
 
-/* FUNCTIONAL */
-
-.hide {
-    display: none;
-}
-
-.dark {
-    background-color: var(--jet);
-    /* color: var(--off-white) */
-    color: var(--nilla)
-}
 
 
 /* NAV */
@@ -197,9 +147,10 @@ li {
     align-items: flex-end;
     margin-top: 2rem;
     padding-bottom: 1rem;
+    color: var(--goldenrod);
 }
 
-.nav {
+nav{
     background-color: var(--jet);
     position: sticky;
     top: 0;
@@ -233,7 +184,11 @@ footer {
     font-size: .75rem;
 }
 
-.footer-text a {
+/* .footer-text a {
+    color: var(--amber);
+} */
+
+#foot-name-link {
     color: var(--amber);
 }
 
@@ -388,3 +343,74 @@ ul.tree, ul.tree ul {
     object-fit: contain;
   }
 
+
+  .frog-zone-banner-element {
+    padding: 1rem 0;
+    position: relative;
+    font-family: "BUMP";
+    color: var(--nilla);
+    font-size: 1.65rem;
+    animation-name: waveAnimation ;
+    animation-duration: 1.75s;
+    animation-iteration-count: infinite ;
+    animation-delay: calc(.075s * var(--i));
+}
+
+  /* FROG ZONE */
+  .frog-zone-banner {
+    text-align: center;
+}
+
+.zone-header {
+    font-size: 1.15rem;
+    font-family: "BUMP";
+    line-height: normal;
+    font-size: 1rem;
+}
+
+.zone-text {
+    font-family: "BUMP";
+    color: var(--goldenrod);
+    line-height: normal;
+    font-size: .65rem;
+    font-weight: 200;
+}
+
+.animated-banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.banner-word {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    margin-right: 10px;
+}
+
+
+/* FUNCTIONAL */
+
+.hide {
+    display: none;
+}
+
+.dark {
+    background-color: var(--jet);
+}
+
+.dark-nav {
+    background-color: var(--goldenrod);
+}
+
+.dark-text {
+    color: var(--goldenrod);
+}
+
+.dark-nav-text {
+    color: var(--jet);
+}
