@@ -52,21 +52,10 @@
     }
 }
 
-/* @keyframes scrollBanner {
-    0% {
-        transform: translateX(0px)
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-} */
-
 .ease-in {
     animation-name: ease-in;
     animation-duration: .5s;
 }
-
-
 
 /* MAIN */
 
@@ -184,10 +173,6 @@ footer {
     font-size: .75rem;
 }
 
-/* .footer-text a {
-    color: var(--amber);
-} */
-
 #foot-name-link {
     color: var(--amber);
 }
@@ -224,6 +209,7 @@ footer {
 }
 
 .works-headline {
+    cursor: pointer;
     text-align: center;
     margin-top: 1.5rem;
 }
@@ -281,7 +267,7 @@ ul.tree, ul.tree ul {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-card {
+/* .modal-card {
     position: relative;
     background-color: var(--goldenrod);
     margin: auto;
@@ -292,7 +278,7 @@ ul.tree, ul.tree ul {
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-}
+} */
 
 .modal-close p {
     font-size: 1rem;
@@ -301,7 +287,7 @@ ul.tree, ul.tree ul {
     color: var(--goldenrod);
 }
 
-.modal-header {
+/* .modal-header {
     padding: 2px 16px;
     background-color: var(--amber);
     border-top-left-radius: 15px;
@@ -319,7 +305,7 @@ ul.tree, ul.tree ul {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     color: var(--jet);
-}
+} */
 
 /* SWIPER */
 
@@ -344,22 +330,8 @@ ul.tree, ul.tree ul {
   }
 
 
-  .frog-zone-banner-element {
-    padding: 1rem 0;
-    position: relative;
-    font-family: "BUMP";
-    color: var(--nilla);
-    font-size: 1.65rem;
-    animation-name: waveAnimation ;
-    animation-duration: 1.75s;
-    animation-iteration-count: infinite ;
-    animation-delay: calc(.075s * var(--i));
-}
-
   /* FROG ZONE */
-  .frog-zone-banner {
-    text-align: center;
-}
+
 
 .zone-header {
     font-size: 1.15rem;
@@ -374,6 +346,22 @@ ul.tree, ul.tree ul {
     line-height: normal;
     font-size: .65rem;
     font-weight: 200;
+}
+
+.frog-zone-banner {
+    text-align: center;
+}
+
+.frog-zone-banner-element {
+    padding: 1rem 0;
+    position: relative;
+    font-family: "BUMP";
+    color: var(--nilla);
+    font-size: 1.65rem;
+    animation-name: waveAnimation ;
+    animation-duration: 1.75s;
+    animation-iteration-count: infinite ;
+    animation-delay: calc(.075s * var(--i));
 }
 
 .animated-banner {
