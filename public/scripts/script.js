@@ -4,6 +4,32 @@ function changeSection(id) {
   $(`#${id}`).parent().parent().parent().parent().hide();
 }
 
+function confettiCannon() {
+  var end = Date.now() + (15 * 1000);
+  var confettiColors = ["#f2f3fc", "#fed053"];
+  
+  (function frame() {
+    confetti({
+      particleCount: 2,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: confettiColors
+    });
+    confetti({
+      particleCount: 2,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: confettiColors
+    });
+  
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  }());
+}
+
 function lightsOut() {
   $("body").addClass("dark");
   $("h1").addClass("dark-text");
@@ -51,6 +77,12 @@ $(function () {
       clickable: true,
     },
   });
+
+  $("#zone-depths").on("click", function () {
+    setTimeout(confettiCannon, 1300)  })
+
+
+
 
   $(".body-nav").on("click", function () {
       if (this.childNodes[0]['href'] === "") {
