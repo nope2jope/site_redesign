@@ -57,6 +57,26 @@
     animation-duration: .5s;
 }
 
+
+/* ordering logic for mobile */
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.lb {
+    order: 1;
+}
+
+.rt {
+    order: 2;
+}
+
+@media (max-width: 800px) {
+    .rt {order:1;}
+    .lb {order:2;}
+    }
+
 /* MAIN */
 
 :root {
@@ -103,6 +123,14 @@ a {
     text-decoration: none;
 }
 
+.out-nav {
+    cursor: pointer;
+    text-decoration-color: var(--jet);
+    text-decoration: wavy underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 50%;
+}
+
 h1 {
     font-family: "Jitter";
     font-size: 2rem;
@@ -137,6 +165,7 @@ li {
     margin-top: 2rem;
     padding-bottom: 1rem;
     color: var(--goldenrod);
+    width: 100%;
 }
 
 nav{
@@ -189,6 +218,7 @@ footer {
 
 .buttons {
     padding-top: 5%;
+    padding-bottom: 10%;
 }
 
 .body-nav {
@@ -344,7 +374,7 @@ ul.tree, ul.tree ul {
     font-family: "BUMP";
     color: var(--goldenrod);
     line-height: normal;
-    font-size: .65rem;
+    font-size: .60rem;
     font-weight: 200;
 }
 

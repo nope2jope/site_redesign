@@ -32,6 +32,7 @@ function confettiCannon() {
 
 function lightsOut() {
   $("body").addClass("dark");
+  $(".border-div").addClass("dark");
   $("h1").addClass("dark-text");
   $("h2").addClass("dark-text");
   $("h3").addClass("dark-text");
@@ -51,6 +52,7 @@ function lightsOut() {
 
 function lightsOn() {
   $("body").removeClass("dark");
+  $(".border-div").removeClass("dark");
   $("h1").removeClass("dark-text");
   $("h2").removeClass("dark-text");
   $("h3").removeClass("dark-text");
