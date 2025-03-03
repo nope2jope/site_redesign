@@ -66,7 +66,7 @@
         <% for (let i=0; i < data.length; i++) { %>
             <% if (data[i].tags.includes("writing")) { %>
 
-                <div id="<%= data[i].modal  %>modal" class="modal">
+                <div id="<%= data[i].modal  %>-modal" class="modal">
                     <div class="swiper works-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img
@@ -88,7 +88,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                     <div class="row center">
-                        <div class="modal-close">
+                        <div class="modal-close center">
                             <p>CLOSE</p>
                         </div>
                     </div>

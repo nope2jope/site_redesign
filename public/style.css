@@ -297,18 +297,18 @@ ul.tree, ul.tree ul {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* .modal-card {
+.modal-card {
     position: relative;
     background-color: var(--goldenrod);
     margin: auto;
-    width: 90%;
+    width: 70%;
     height:auto;
     padding: 0;
     border: 1px solid var(--amber);
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-} */
+}
 
 .modal-close p {
     font-size: 1rem;
@@ -327,7 +327,7 @@ ul.tree, ul.tree ul {
 
 .modal-body {
     padding: 2px 16px;
-}
+}*/
 
 .modal-footer {
     padding: 2px 16px;
@@ -335,7 +335,7 @@ ul.tree, ul.tree ul {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     color: var(--jet);
-} */
+}
 
 /* SWIPER */
 

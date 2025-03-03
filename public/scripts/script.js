@@ -95,7 +95,7 @@ $(function () {
 });
 
   $(".modal-open").on("click", function () {
-    $(`#${this.id}modal`).show()
+    $(`#${this.id}-modal`).show()
   });
 
   $(".modal-close").on("click", function () {
