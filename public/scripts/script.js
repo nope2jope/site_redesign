@@ -31,6 +31,7 @@ function confettiCannon() {
 }
 
 function lightsOut() {
+  
   $("body").addClass("dark");
   $(".border-div").addClass("dark");
   $("h1").addClass("dark-text");
@@ -66,6 +67,10 @@ function lightsOn() {
   $("#name-link").removeClass("dark-nav-text")
   $("#foot-text").removeClass("dark-nav-text")
   $("#foot-name-link").css("color", "var(--amber)")
+}
+
+function flipCard(){
+  $("#flip").addClass("flipped")
 }
 
 $(function () {
@@ -114,4 +119,8 @@ $(function () {
     lightsOn();
   });
 
-});
+  $(".flip").on("click", function () {
+    $(this).toggleClass('flipped')
+    })
+  });
+
