@@ -150,14 +150,9 @@ h3 {
     margin: 0;
 }
 
-
-
 li {
     font-family: "Sedate";
 }
-
-
-
 
 /* NAV */
 
@@ -300,45 +295,12 @@ ul.tree, ul.tree ul {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* .modal-card {
-    position: relative;
-    background-color: var(--goldenrod);
-    margin: auto;
-    width: 70%;
-    height:auto;
-    padding: 0;
-    border: 1px solid var(--amber);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-} */
-
 .modal-close p {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     color: var(--goldenrod);
 }
-
-/* .modal-header {
-    padding: 2px 16px;
-    background-color: var(--amber);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    color: var(--jet);
-}
-
-.modal-body {
-    padding: 2px 16px;
-}*/
-
-/* .modal-footer {
-    padding: 2px 16px;
-    background-color: var(--amber);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    color: var(--jet);
-} */
 
 /* SWIPER */
 
@@ -390,9 +352,9 @@ ul.tree, ul.tree ul {
 }
 
 .card-facts {
-    width: 90%;
+    width: 95%;
     position: absolute;
-    top: 20px;
+    top: 5px;
     padding-top: 15%;
 
 }
@@ -441,12 +403,13 @@ ul.tree, ul.tree ul {
     margin-right: 10px;
 }
 
-.flip-card {
+#flip-card {
+    position: relative;
     background-color: transparent;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
-  /* This container is needed to position the front and back side */
+  /* initial positioning */
   .flip-card-inner {
     position: relative;
     width: 100%;
@@ -456,16 +419,21 @@ ul.tree, ul.tree ul {
     transform-style: preserve-3d;
   }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* gentle nudge */
   .flip:hover .flip-card-inner {
     transform: rotateY(20deg);
   }
+
+  .flip.flipped:hover .flip-card-inner {
+    transform: rotateY(160deg)
+  }
+
 
   .flip.flipped .flip-card-inner{
     transform: rotateY(180deg);
   } 
   
-  /* Position the front and back side */
+  /* positioning for front/back card */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -474,13 +442,12 @@ ul.tree, ul.tree ul {
     backface-visibility: hidden;
   }
   
-  /* Style the front side (fallback if image is missing) */
+  /* front-card fallback if image is missing) */
   .flip-card-front {
     background-color: #bbb;
     color: black;
   }
   
-  /* Style the back side */
   .flip-card-back {
     background-color: var(--off-white);
     color: var(--jet);
