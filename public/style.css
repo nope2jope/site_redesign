@@ -108,9 +108,13 @@ div {
     position: relative;
 }
 
-details>summary {
+details > summary {
     list-style: none;
-}
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
 
 /* TEXT */
 
@@ -152,6 +156,13 @@ h3 {
 
 li {
     font-family: "Sedate";
+}
+
+#mug {
+    display: block; 
+
+    max-width: 440px;
+    max-height: 440px;
 }
 
 /* NAV */

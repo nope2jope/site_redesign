@@ -1,6 +1,6 @@
 import express from "express";
-import "./public/scripts/pokedex.js";
-import { wData }  from "./public/scripts/works-data.js";
+import { endpointName, endpointType, vulnerabilityTemplate, multiplierTemplate, resetTemplates, checkType, checkTypeWeaknesses, mergeObjects, calculateVulnerability, checkMultipliers } from "./public/scripts/pokedex.js";
+import  {wData} from "./public/scripts/works-data.js";
 
 const PORT = 8000;
 const HOST = '0.0.0.0';

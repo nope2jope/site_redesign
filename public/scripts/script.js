@@ -31,7 +31,7 @@ function confettiCannon() {
 }
 
 function lightsOut() {
-  
+
   $("body").addClass("dark");
   $(".border-div").addClass("dark");
   $("h1").addClass("dark-text");
@@ -94,6 +94,7 @@ $(function () {
   $(".body-nav").on("click", function () {
       if (this.childNodes[0]['href'] === "") {
         changeSection(this.id)
+        window.scrollTo(0,0)
       }
 
 
